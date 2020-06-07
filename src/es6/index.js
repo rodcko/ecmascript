@@ -147,3 +147,49 @@ helloPromise()
     .then(response => console.log(response))
     .then(() => console.log('hola')) // Podemos agregar mas then como necesitemos
     .catch(error => console.log(error));
+
+// ***** CLASES
+
+class calculator {
+    constructor() {
+        this.valueA = 0; // Asigna desde el scope global estas 2 variables
+        this.valueB = 0;
+    }
+    sum(valueA, valueB) { // Metodo
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator(); // Nueva instancia, creamos un objeto
+console.log(calc.sum(2,2));
+
+// ***** MODULOS
+
+import { hello } from './module';  
+
+hello(); // Ya es una funcion disponible dentro de este archivo
+// Podemos separar nuestra logica por modulos...
+
+// ***** GENERATORS (GENERADORES)
+// Funcion especial que retorna valores segun el algoritmo definido
+
+function* helloWorld() {
+    if (true) {
+        yield 'Hello, '; // Guarda este estado de forma interna
+    }
+    if (true) {
+        yield 'World';
+    }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+// Podria utilizarse para Fibonacci
+
+
+
+
