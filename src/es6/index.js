@@ -1,3 +1,6 @@
+// ***** DEFAULT PARAMS Y CONCATENACION
+
+// Forma antigua
 function newFunction(name, age, country) {
     var name = name || 'oscar';
     var age = age || 32;
@@ -5,7 +8,7 @@ function newFunction(name, age, country) {
     console.log(name, age, country)
 }
 
-// es6
+// ES6
 function newFunction2(name = 'oscar', age = 32, country = "MX") {
     console.log(name, age, country);
 };
@@ -15,6 +18,7 @@ newFunction2();
 newFunction2('Ricardo', '23', 'CO');
 
 
+// ***** TEMPLATE LITERAL
 // Template literal antiguo
 let hello = "Hello";
 let world = "World";
@@ -26,6 +30,7 @@ let epicPhrase2 = `${hello} ${world}`;
 console.log(epicPhrase2);
 
 
+// ***** MULTILINEA
 // Multilineas antiguo
 let lorem = "Aal;skdfadfaa;ldsfksad asdlkf akdsjf \n"
 + "otra frase as;ldkfjakd"
@@ -39,6 +44,7 @@ console.log(lorem);
 console.log(lorem2);
 
 
+// ***** DESTRUCTURACION
 let person = {
     'name': 'oscar',
     'age': 32,
@@ -53,14 +59,17 @@ let { name, age } = person;
 console.log(name, age);
 
 
+//  ***** SPREAD OPERATOR (METODO DE PROPAGACION)
 let team1 = ['Oscar', 'Julian', 'Ricardo'];
 let team2 = ['Valeria', 'Yesica', 'Camila'];
 
-// Crear un nuevo elemento, agregando mas elementos con el metodo de propagacion
+// ES6 - crear un nuevo elemento, agregando mas elementos con el metodo de propagacion
 let education = ['David', ...team1, ...team2];
 
 console.log(education);
 
+
+// ***** LET, CONST y VAR
 // Disponible forma global
 var hola = 'hola';
 
