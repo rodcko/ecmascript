@@ -191,5 +191,3 @@ console.log(generatorHello.next().value);
 // Podria utilizarse para Fibonacci
 
 
-
-
