@@ -93,3 +93,57 @@ const a = 'b';
 a = 'a';
 
 console.log(a);
+
+// ***** ASIGNACION EN OBJETOS
+let name = 'rodcko';
+let age = 27;
+
+// Forma antigua
+obj = { name: name, age: age };
+
+// ES6
+obj2 = { name, age };
+console.log(obj2);
+
+// ***** ARROW FUNCTION
+const names = [
+    { name: 'rodcko', age: 27 },
+    { name: 'josue', age: 32 }
+]
+
+//  Iterar cada elemento con map
+let listOfNames = names.map(function (item) {
+    console.log(item.name);
+})
+
+// Las arrow function son funciones anonimas - ES6
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {
+    //
+}
+
+const listOfNames4 = name => {
+    //
+}
+
+const square = num => num * num; // Evitamos generar un return, lo asignamos directamente
+
+// ***** PROMESAS para trabajar asincronismo
+
+// La promesa es algo que va a pasar...
+// La promesa puede resolver o sera rechazada
+const helloPromise = () => {    
+    return new Promise((resolve, reject) => {
+        if (false) {
+            resolve('Hey! todo bien')
+        } else {
+            reject('Oops! algo salio mal');
+        }
+    });
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('hola')) // Podemos agregar mas then como necesitemos
+    .catch(error => console.log(error));
