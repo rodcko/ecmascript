@@ -32,7 +32,7 @@ console.log(string.padEnd(12, ' ----'))
 console.log('food'.padEnd(12, '  ----'))
 // Nos puede servir para presentar una lista de elementos
 
-// ***** COMAS AL FINAL
+// ***** COMAS AL FINAL o TRAILING COMAS
 
 const obj = {
     name: 'rodcko', // Puede existir un valor despues o no, no hay problema
